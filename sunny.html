@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="body1">
+    <div class="wapper">
+        <div class="img">
+            <img id="p1" src="images/m5.png" onclick="choose('p1')"/>
+        </div>
+
+        <div class="img">
+            <img id="p2" src="images/m2.png" onclick="choose('p2')"/>
+
+        </div>
+        <div class="img">
+            <img id="p3" src="images/m3.png" onclick="choose('p3')"/>
+
+        </div>
+        <div class="img">
+            <img id="p4" src="images/m4.png" onclick="choose('p4')"/>
+
+        </div>
+
+    </div>
+
+    <div class="wapper">
+        <div class="box1">
+
+            <input class="btn" type="button" value="重置" onclick="reset()" style="background-image:url('images/change.png')"><br>
+            <input class="btn" type="button" value="交换" onclick="change()" style="background-image:url('images/swap.png')"><br>
+            <input class="btn" type="button" value="计时" onclick="time()" style="background-image:url('images/start.png')"><br>
+        </div>
+
+        <div class="box2" id="b2">
+            <!--<img class="out"  src="img/plane.png">-->
+            <label class="out">交换日志</label><br>
+            <div id="way" style="word-wrap:break-word; word-break:break-all;">
+            </div>
+
+        </div>
+
+        <div  class="box3">
+
+            <div >
+                <p>候选答案</p>
+                <img class="img2" id="m5" src="images/m5.png" onclick="choose2('images/m5.png')"/>
+
+                <img id="m2" class="img2" src="images/m2.png" onclick="choose2('images/m2.png')"/>
+                <br>
+                <img id="m3"  class="img2" src="images/m3.png" onclick="choose2('images/m3.png')"/>
+
+                <img id="m4" class="img2" src="images/m4.png" onclick="choose2('images/m4.png')"/>
+
+            </div>
+            <div >
+                <input class="time" type="text" id="tt" value="00:00" />
+            </div>
+
+
+        </div>
+        <div style="clear:both;height:0px;" ></div>
+
+
+    </div>
+    <div class="wapper">
+        <div id="stars" class="disp">
+
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="body2">
+    <div class="body22">
+        “匹配”游戏规则：<br>
+        1、点击交换，随机交换两张图片位置，请根据交换日志，在上方选择待选图，在候选区，选择匹配；<br>
+        2、在交换后，请点击计时按钮，开始计时，时间作为评判标准；<br>
+        3、重置按钮，点击后，将随机打乱四幅待选图位置，并计时归零；<br>
+        标准：<br>
+        根据交换次数分为简单，一般，困难三种难度，结合找到正确匹配图的时间，给出星级；<br><br />
+        提醒：<br>
+        选择错误的匹配图，将会自动将两张图片进行交换！！
+    </div>
+</div>
+</div>
+
+<div style="float:left">
+    <!--<div class="body" style="width:200px;height:600px;">
+        成绩：<br><br>
+
+    </div>-->
+</div>
+
+<script src="test.js"></script>
+</body>
+</html>
